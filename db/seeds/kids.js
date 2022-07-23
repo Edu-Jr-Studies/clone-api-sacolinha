@@ -1,0 +1,80 @@
+exports.seed = function (knex) {
+  // Deletes ALL existing entries
+  return knex("kids")
+    .del()
+    .then(function () {
+      // Inserts seed entries
+      return knex("kids").insert([
+        {
+          name: "Diego",
+          mother: "Marlene",
+          city: "Japaratinga",
+          state: "AL",
+          birthDate: "1987-08-14 00:00:00",
+          sizeShoe: "50",
+          sizeShirt: "50",
+          sizePants: "44",
+          isPrinted: false,
+          isJoining: false,
+          photo: null,
+          createdAt: new Date().toISOString(),
+        },
+        {
+          name: "Renata",
+          mother: "Roseane",
+          city: "Japaratinga",
+          state: "AL",
+          birthDate: "1987-08-14 00:00:00",
+          sizeShoe: "50",
+          sizeShirt: "50",
+          sizePants: "44",
+          isPrinted: false,
+          isJoining: false,
+          photo: null,
+          createdAt: new Date().toISOString(),
+        },
+        {
+          name: "Thales",
+          mother: "Renata",
+          city: "Japaratinga",
+          state: "AL",
+          birthDate: "1987-08-14 00:00:00",
+          sizeShoe: "50",
+          sizeShirt: "50",
+          sizePants: "44",
+          isPrinted: false,
+          isJoining: false,
+          photo: null,
+          createdAt: new Date().toISOString(),
+        },
+        {
+          name: "Dafne",
+          mother: "Fabiana",
+          city: "Porto Calvo",
+          state: "AL",
+          birthDate: "1987-08-14 00:00:00",
+          sizeShoe: "50",
+          sizeShirt: "50",
+          sizePants: "44",
+          isPrinted: false,
+          isJoining: false,
+          photo: null,
+          createdAt: new Date().toISOString(),
+        },
+        {
+          name: "Felipe",
+          mother: "Veritana",
+          city: "Sao Bento",
+          state: "Alago",
+          birthDate: "19/03/2007",
+          sizeShirt: "M",
+          sizeShoe: "42",
+          sizePants: "38",
+          isPrinted: false,
+          isJoining: false,
+          photo: null,
+          createdAt: new Date().toISOString(),
+        },
+      ]);
+    });
+};
